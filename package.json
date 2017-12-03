@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "config": "ts-node ./src/set-env.ts",
-    "start": "npm run config -- --environment=dev && ng serve --environment=dev",
-    "build": "npm run config -- --environment=prod && ng build --environment=prod",
+    "config": "ts-node set-env.ts",
+    "start": "cross-env PRODUCTION=false SUPER_SECRET_CRED1=http://i.imgur.com/PDj8Cs9.gif SUPER_SECRET_CRED2=http://i.imgur.com/D9BCIoQ.gif npm run config && ng serve",
+    "build": "npm run config && ng build --environment=env",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,9 +23,7 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
-    "dotenv": "^4.0.0",
     "rxjs": "^5.1.0",
-    "yargs": "^8.0.2",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -35,6 +33,7 @@
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.0.1",
+    "cross-env": "^5.1.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
