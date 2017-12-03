@@ -1,7 +1,7 @@
 # angular-cli-envvars (for Angular CLI V1.1.0)
 This is an example repo to demo the approach to injecting environment variables into dynamically created environment files with the Angular CLI.
 
-This repo is the subject of a response
+This repo is the subject of a [response](https://medium.com/@h_martos/amazing-job-sara-you-save-me-a-lot-of-time-thank-you-8703b628e3eb)
 to the article ["Angular CLI and OS Environment Variables"](https://medium.com/@natchiketa/angular-cli-and-os-environment-variables-4cfa3b849659) written by 
 Sara Lara
 
@@ -26,6 +26,14 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 To build the project, export needed environment variables and then run `npm run build` to build the project. The build artifacts will be stored in the `dist/` 
 directory.
+
+Example:
+
+- export PRODUCTION=true
+- export SUPER_SECRET_CRED1=http://i.imgur.com/PDj8Cs9.gif
+- export SUPER_SECRET_CRED2=http://i.imgur.com/D9BCIoQ.gif
+- npm run build
+
 
 ## Running unit tests
 
